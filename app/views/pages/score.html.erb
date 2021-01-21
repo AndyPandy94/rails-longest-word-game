@@ -1,0 +1,12 @@
+<h1>Result!</h1>
+<h2><%#= @response %></h2>
+
+<% if @check && @included %>
+  <h2>Well done!</h2>
+<% elsif @check && @included == false  %>
+  <h2>Word is not part of the grid!</h2>
+<% else %>
+  <h2>Incorrect word!</h2>
+<% end %>
+
+<p><%= link_to "Play again?", game_path %></p>
